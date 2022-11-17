@@ -8,7 +8,7 @@
     "start": "npm run build && cd server && node server.js",
     "server": "cd server && nodemon server.js --ignore client",
     "build": "cd client && npm run build",
-    "install": "cd client && npm install",
+    "install": "cd server && npm i && cd ../client && npm i",
     "client": "cd client && npm start"
   },
   "keywords": [],
@@ -19,7 +19,18 @@
     "if-env": "^1.0.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.0",
     "concurrently": "^5.2.0",
-    "nodemon": "^2.0.4"
+    "css-loader": "^6.7.2",
+    "html-webpack-plugin": "^5.5.0",
+    "nodemon": "^2.0.4",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-pwa-manifest": "^4.3.0",
+    "workbox-webpack-plugin": "^6.5.4"
   }
 }
